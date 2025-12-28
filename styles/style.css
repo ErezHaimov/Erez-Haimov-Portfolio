@@ -276,14 +276,14 @@ P {
 .Databases img:nth-child(4) {
     /* nth-child(4) because h3 is 1, img1 is 2, img2 is 3, img3 is 4 */
     grid-column: span 2;
-    justify-self: center; /* Ensures it stays in the middle of the merged area */
+    justify-self: center;
 }
 
 .contact-form {
     max-width: 600px;
     margin: 15px auto;
     padding: 15px;
-    background-color: var(--bg-navbar); /* Matches your header/cards */
+    background-color: var(--bg-navbar);
     border-radius: 15px;
     box-shadow: var(--box-shadow);
 }
@@ -314,6 +314,9 @@ P {
     font-size: 1.25rem;
     font-family: inherit;
     transition: all 0.3s ease;
+}
+.contact-form ::placeholder {
+    color: var(--text-secondary);
 }
 
 /* Focus effect: The border glows violet when you click inside */
@@ -416,7 +419,7 @@ footer #contact a:hover {
     text-align: center;
     font-size: 1.4rem;
 
-    border-top: 1px solid grey; /* the separating line */
+    border-top: 1px solid var(--text-secondary); /* the separating line */
     width: 100%; /* make line stretch across the footer */
     margin-top: 5px; /* space above the line */
 }
