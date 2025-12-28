@@ -1,0 +1,422 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+:root {
+    --bg-main: #d4c1fc; /* page background */
+    --bg-navbar: #e9d5fc; /* navbar */
+    --bg-navbar-transparent: #e9d5fc91; /* navbar */
+    --bg-hover: #8f6dd4; /* hover / active item */
+    --text-primary: #1f2937; /* main text (almost black) */
+    --text-secondary: #6b7280; /* muted text */
+    --accent-main: #7c3aed; /* violet */
+    --accent-strong: #5b21b6; /* darker violet */
+    --border-light: #e5e7eb;
+    --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+    text-decoration: none;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 75%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* full viewport height */
+    width: 100%;
+    background-color: var(--bg-main);
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background-color: var(--bg-navbar);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+.header img {
+    height: 6rem;
+    margin: 0;
+    display: block;
+}
+
+.header .navbar {
+    margin-right: 2rem;
+}
+
+.header .navbar a {
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: black;
+    transition: 0.3s;
+}
+
+.header .navbar a:hover {
+    color: var(--bg-hover);
+}
+
+.hamburger {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    display: none; /* hidden by default, shown on mobile */
+    margin-right: 10px;
+}
+
+/* Default: ☰ */
+.hamburger::before {
+    content: "☰";
+    display: inline-block;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Checked: ✕ */
+#menu-toggle:checked + .hamburger::before {
+    content: "✕";
+    transform: rotate(180deg) scale(1.2);
+}
+
+main {
+    flex: 1; /* Keeps footer at the bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    width: 90%;
+    box-shadow: var(--box-shadow);
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 5rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+h2 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+h3 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+h4 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+h5 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+h6 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+P {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 30px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-main); /* Violet text */
+    background-color: transparent;
+    border: 2px solid var(--accent-main); /* Violet border */
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--accent-main);
+    color: white; /* Flips colors on hover */
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow);
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-item {
+    max-width: 90%;
+    max-height: 90%;
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    box-sizing: border-box;
+}
+
+.project-item img {
+    max-width: 75%;
+    max-height: 75%;
+    margin-top: 0;
+}
+
+.project-item:hover,
+.skill-item:hover {
+    background: var(--bg-hover);
+    transition: 0.3s;
+}
+
+.project-item a,
+.skill-item a {
+    display: flex;
+    font-size: 1.5rem;
+    color: var(--black);
+    text-decoration: underline;
+}
+
+.project-item a:hover,
+.skill-item a:hover {
+    color: var(--bg-hover);
+    transition: 0.3s;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+    margin: 0 auto;
+}
+
+.skill-item {
+    width: 100%;
+    min-width: 250px;
+    max-width: 500px;
+    min-height: 450px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    align-items: center;
+
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    box-sizing: border-box;
+    padding: 2rem; /* Added padding to keep icons away from edges */
+}
+
+.skill-item h3 {
+    grid-column: span 2;
+}
+
+.skill-item img {
+    max-width: 75%;
+    max-height: 75%;
+    margin-top: 0;
+}
+
+.skill-item img:hover {
+    transform: scale(1.15);
+}
+
+.Databases img:nth-child(4) {
+    /* nth-child(4) because h3 is 1, img1 is 2, img2 is 3, img3 is 4 */
+    grid-column: span 2;
+    justify-self: center; /* Ensures it stays in the middle of the merged area */
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: var(--bg-navbar); /* Matches your header/cards */
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 1.25rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-color: var(--bg-main); /* Slightly darker than form background */
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+/* Focus effect: The border glows violet when you click inside */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-main);
+    background-color: white;
+    box-shadow: 0 0 8px rgba(138, 43, 226, 0.2);
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical; /* Allows user to drag it taller, but not wider */
+}
+
+/* Submit Form Button Styling */
+.contact-form .btn {
+    width: 100%;
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--bg-navbar);
+    width: 100%;
+    box-shadow: var(--box-shadow);
+}
+
+footer #contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+footer #contact p {
+    font-size: 1.8rem;
+    margin: 2px 0;
+}
+
+footer #contact a {
+    color: var(--accent-main);
+    text-decoration: underline;
+}
+
+footer #contact a:hover {
+    color: var(--accent-strong);
+}
+
+.footer-socials {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.footer-socials a {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-socials a img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    transition: all 0.3s ease;
+}
+.footer-socials a:hover img,
+.footer-socials a:active img {
+    transform: scale(1.2) rotate(5deg);
+    filter: drop-shadow(0 0 20px var(--box-shadow));
+}
+
+#toTopBtn {
+    position: absolute;
+    right: 25px;
+    bottom: 50px;
+    transform: translateY(-50%);
+
+    width: 50px;
+    height: 50px;
+    background: var(--accent-main);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    box-shadow: var(--box-shadow);
+    transition: 0.3s;
+    z-index: 10;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 1.4rem;
+
+    border-top: 1px solid grey; /* the separating line */
+    width: 100%; /* make line stretch across the footer */
+    margin-top: 5px; /* space above the line */
+}

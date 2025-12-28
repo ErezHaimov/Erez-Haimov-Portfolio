@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta tags -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Portfolio of Erez Haimov - Full stack Developer showcasing my projects, skills and my contact information."
+        />
+        <meta
+            name="keywords"
+            content="Erez Haimov, Full stack, Developer, Full stack Developer, Portfolio, Web Development, Projects, Frontend, Backend, HTML, CSS, JavaScript"
+        />
+        <!-- Favicon = The website icon on top -->
+        <link rel="icon" type="image/png" href="../pictures/Site-Logo.png" />
+        <!-- Stylesheets -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+        />
+        <link rel="stylesheet" href="../styles/style.css" />
+        <link rel="stylesheet" href="../styles/mobile.css" />
+        <!-- Site title -->
+        <title>Erez Haimov | Full stack Developer Contact</title>
+    </head>
+
+    <body>
+        <header id="top" class="header">
+            <a href="../index.html" class="navbar-logo-link"
+                ><img
+                    src="../pictures/Site-Logo.png"
+                    alt="Erez Haimov Logo"
+                    loading="lazy"
+            /></a>
+
+            <input type="checkbox" id="menu-toggle" hidden />
+            <label for="menu-toggle" class="hamburger"></label>
+
+            <nav class="navbar">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="skills.html">Skills</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h2>Get in touch</h2>
+                <!-- First paragraph -->
+                <p>I'll do my best to get back to you as soon as I can.</p>
+                <!-- Form container -->
+                <div class="contact-form">
+                    <!-- Form backend: Getform (https://getform.io) -->
+                    <form action="https://getform.io/f/bpjxprxb" method="POST">
+                        <!-- Input text box -->
+                        <div>
+                            <label for="name">Name:</label>
+                            <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                placeholder="Your name"
+                                title="Please fill your name."
+                                required
+                            />
+                        </div>
+                        <!-- Input email box -->
+                        <div>
+                            <label for="email">Email:</label>
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="Your email"
+                                title="Please fill your email."
+                                required
+                                class="text-pink-soft"
+                            />
+                        </div>
+                        <!-- Input message box -->
+                        <div>
+                            <label for="message">Message:</label>
+                            <textarea
+                                name="message"
+                                id="message"
+                                placeholder="Your message"
+                                title="Please fill your message."
+                                required
+                            ></textarea>
+                        </div>
+                        <div>
+                            <!-- Submit button -->
+                            <input
+                                type="submit"
+                                value="Send"
+                                class="btn"
+                                title="Send Message."
+                            />
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div id="contact">
+                <h5>Contact/Follow Me</h5>
+                <div class="footer-socials">
+                    <a href="mailto:haimov.erez@gmail.com" class="email-link">
+                        <img
+                            src="../pictures/Gmail-Logo.png"
+                            alt="Gmail Logo"
+                        />
+                    </a>
+                    <a
+                        href="https://github.com/ErezHaimov"
+                        target="_blank"
+                        aria-label="GitHub"
+                    >
+                        <img src="../pictures/GitHub-Logo.png" alt="GitHub" />
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/erez-haimov/"
+                        target="_blank"
+                        aria-label="LinkedIn"
+                    >
+                        <img
+                            src="../pictures/LinkedIn-Logo.png"
+                            alt="LinkedIn"
+                        />
+                    </a>
+                </div>
+            </div>
+
+            <a href="#" target="_top" id="toTopBtn"
+                ><i class="bi bi-arrow-up"></i
+            ></a>
+
+            <div class="footer-bottom">
+                <h6>&copy; 2025 Erez Haimov | All Rights Reserved.</h6>
+            </div>
+        </footer>
+    </body>
+</html>

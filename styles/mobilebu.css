@@ -1,0 +1,46 @@
+/* Mobile: sidebar hidden, toggle with hamburger */
+@media (max-width: 767px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: auto;
+        width: 60px;
+        box-sizing: border-box;
+        flex-direction: column;
+        border-radius: 6px;
+    }
+
+    .navbar-logo {
+        display: none;
+    }
+
+    .navbar-logo-link {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        display: none; /* hidden by default */
+    }
+
+    #menu-toggle:checked ~ .menu {
+        display: block;
+    }
+
+    .navbar .menu li a:hover i {
+        display: inline-block;
+    }
+
+    .navbar .menu li a:hover span {
+        display: none !important;
+    }
+
+    .content {
+        margin: 0;
+        padding: 20px;
+    }
+}

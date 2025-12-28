@@ -1,0 +1,183 @@
+:root {
+    --bg-main: #f7f5fb; /* page background */
+    --bg-navbar: #ffffff; /* navbar */
+    --bg-hover: #efe9fb; /* hover / active item */
+    --text-primary: #1f2937; /* main text (almost black) */
+    --text-secondary: #6b7280; /* muted text */
+    --accent-main: #7c3aed; /* violet */
+    --accent-strong: #5b21b6; /* darker violet */
+    --icon-default: #7c3aed;
+    --icon-hover: #5b21b6;
+    --border-light: #e5e7eb;
+}
+
+/* Navbar container */
+.navbar {
+    background: var(--bg-navbar); /* light mode bg */
+    color: var(--icon-default); /* light mode text */
+    display: flex; /* enable flex layout */
+    flex-direction: column; /* stack menu items vertically */
+    justify-content: space-between; /* vertical centering */
+    align-items: center; /* horizontal centering */
+    position: fixed;
+    height: 100%;
+    width: 70px; /* width for desktop */
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar-logo-link {
+    display: flex; /* horizontal layout of image + text */
+    flex-direction: column; /* stack image above text */
+    align-items: center;
+    text-decoration: none; /* remove underline */
+    color: var(--icon-default); /* choose your color */
+    font-weight: bold; /* optional */
+    margin-bottom: 20px; /* spacing from menu */
+    text-align: center;
+}
+
+.navbar-logo {
+    width: 50px; /* adjust size */
+    height: 50px;
+}
+.navbar .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navbar .menu li {
+    margin: 20px 0;
+}
+
+.navbar .menu li a {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* center icon/text */
+    width: 70px; /* fixed width */
+    height: 30px; /* fixed height to prevent shift */
+    padding: 10px;
+    color: var(--icon-default);
+    text-decoration: none;
+}
+
+.navbar .menu li a i,
+.navbar .menu li a span {
+    width: 100%;
+    text-align: center;
+    font-weight: bold; /* optional */
+    /*text-shadow: -1.5px 0 1px black, 1.5px 0 1px black,
+        0 -1.5px 1px black, 0 1.5px 1px black;*/
+}
+
+/* Default: icon visible, text hidden */
+.navbar .menu li a i {
+    display: inline-block;
+    font-size: 1.3rem;
+}
+
+.navbar .menu li a span {
+    display: none; /* hide text by default */
+    font-size: 0.9rem;
+}
+
+/* On hover: icon hidden, text shown */
+.navbar .menu li a:hover i {
+    display: none;
+}
+
+.navbar .menu li a:hover span {
+    display: inline-block;
+    text-align: center;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Hamburger icon for mobile */
+.hamburger {
+    width: 40px;
+    height: 40px;
+    line-height: 40px; /* centers the icon vertically */
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none; /* hidden by default, shown on mobile */
+}
+
+/* Default: ☰ */
+.hamburger::before {
+    content: "☰";
+    display: inline-block;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Checked: ✕ */
+#menu-toggle:checked + .hamburger::before {
+    content: "✕";
+    transform: rotate(180deg) scale(1.2);
+}
+
+/* Menu links */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.menu li a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* center icons vertically within available space */
+    flex-grow: 1;
+}
+
+/* ===== Dark Mode ===== */
+.dark-mode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+#dark-mode-toggle:checked + :root {
+    --bg-main: #0f1220;
+    --bg-navbar: #161a2b;
+    --bg-hover: #222651;
+    --text-primary: #e5e7eb;
+    --text-secondary: #9ca3af;
+    --accent-main: #a78bfa;
+    --accent-strong: #c4b5fd;
+    --icon-default: #a78bfa;
+    --icon-hover: #c4b5fd;
+    --border-light: #2d3154;
+}
+
+.dark-mode .sun {
+    display: none;
+}
+
+/* When checked, show sun and hide moon */
+#dark-mode-toggle:checked + .dark-mode .moon {
+    display: none;
+}
+
+#dark-mode-toggle:checked + .dark-mode .sun {
+    display: inline;
+}
+
+#dark-toggle:checked ~ .navbar {
+    background: #2c2c2c;
+}
+
+#dark-mode-toggle:checked ~ .navbar .hamburger {
+    color: black;
+}

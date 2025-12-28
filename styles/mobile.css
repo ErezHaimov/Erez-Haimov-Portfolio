@@ -1,0 +1,91 @@
+@media (max-width: 768px) {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    section {
+        padding: 2rem 1rem;
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    h4 {
+        font-size: 2rem;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    h5 {
+        font-size: 1.7rem;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    h6 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    .header .navbar {
+        position: absolute;
+        margin-right: 0;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 0 2rem;
+        background: var(--bg-navbar);
+        box-shadow: var(--box-shadow);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: clip-path 0.4s ease;
+    }
+
+    .header .navbar a {
+        display: block;
+        margin: 2rem 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    #menu-toggle:checked ~ .navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .project-item,
+    .skill-item {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .project-item img,
+    .skill-item img {
+        margin-top: 20px;
+    }
+
+    #toTopBtn {
+        width: 40px;
+        height: 40px;
+        right: 15px;
+    }
+}
