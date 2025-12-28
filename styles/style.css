@@ -192,6 +192,8 @@ P {
 }
 
 .project-item {
+    min-width: 40%;
+    min-height: 40%;
     max-width: 90%;
     max-height: 90%;
     height: auto;
