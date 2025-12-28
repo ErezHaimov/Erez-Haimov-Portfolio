@@ -392,8 +392,8 @@ footer #contact a:hover {
 
 #toTopBtn {
     position: absolute;
-    right: 25px;
-    bottom: 50px;
+    right: 20px;
+    bottom: 35px;
     transform: translateY(-50%);
 
     width: 50px;
