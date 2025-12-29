@@ -41,64 +41,6 @@ body {
     background-color: var(--bg-main);
 }
 
-.header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-
-    background-color: var(--bg-navbar);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: var(--box-shadow);
-}
-
-.header img {
-    height: 6rem;
-    margin: 0;
-    display: block;
-}
-
-.header .navbar {
-    margin-right: 2rem;
-}
-
-.header .navbar a {
-    font-size: 2rem;
-    margin-left: 2rem;
-    color: black;
-    transition: 0.3s;
-}
-
-.header .navbar a:hover {
-    color: var(--bg-hover);
-}
-
-.hamburger {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    font-size: 30px;
-    color: black;
-    cursor: pointer;
-    display: none; /* hidden by default, shown on mobile */
-    margin-right: 10px;
-}
-
-/* Default: ☰ */
-.hamburger::before {
-    content: "☰";
-    display: inline-block;
-    transition: transform 0.3s, opacity 0.3s;
-}
-
-/* Checked: ✕ */
-#menu-toggle:checked + .hamburger::before {
-    content: "✕";
-    transform: rotate(180deg) scale(1.2);
-}
-
 main {
     flex: 1; /* Keeps footer at the bottom */
     display: flex;
@@ -160,6 +102,66 @@ P {
     margin-top: 10px;
 }
 
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background-color: var(--bg-navbar);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+.header img {
+    height: 6rem;
+    margin: 0;
+    display: block;
+}
+
+.header .navbar {
+    margin-right: 2rem;
+}
+
+.header .navbar a {
+    text-decoration: none;
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: black;
+    transition: 0.3s;
+}
+
+.header .navbar a:hover {
+    color: var(--bg-hover);
+}
+
+.hamburger {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    display: none; /* hidden by default, shown on mobile */
+    margin-left: 10px;
+}
+
+/* Default: ☰ */
+.hamburger::before {
+    content: "☰";
+    display: inline-block;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Checked: ✕ */
+#menu-toggle:checked + .hamburger::before {
+    content: "✕";
+    transform: rotate(180deg) scale(1.2);
+}
+
 .btn {
     display: inline-block;
     margin-top: 25px;
@@ -182,44 +184,70 @@ P {
     box-shadow: var(--box-shadow);
 }
 
-.project-list {
+#about {
+    text-align: left; /* Aligns the text characters */
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.bio,
+.experience-section {
     width: 100%;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
+    text-align: left;
+    margin-bottom: 20px;
 }
 
-.project-item {
-    min-width: 40%;
-    min-height: 40%;
-    max-width: 90%;
-    max-height: 90%;
-    height: auto;
-    width: auto;
+#about h2 {
+    margin-bottom: 20px;
+    align-self: flex-start;
+}
+
+#about .btn {
+    align-self: flex-start;
+    margin-top: 10px;
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover; /* This prevents the image from stretching */
+    border-bottom: 1px solid white; /* Adds a tiny separator line */
+}
+
+.project-item .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
     border-radius: 10px;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    text-align: center;
-    box-shadow: var(--box-shadow);
-    box-sizing: border-box;
+    overflow: hidden;
 }
 
-.project-item img {
-    max-width: 75%;
-    max-height: 75%;
-    margin-top: 0;
-}
-
-.project-item:hover,
-.skill-item:hover {
+.project-item .card:hover {
+    transform: translateY(-5px);
     background: var(--bg-hover);
-    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.project-item a,
+/* Style the images inside the thumbnails */
+.project-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Keeps images from stretching */
+}
+
+.project-item a {
+    font-size: 1.1rem;
+    color: var(--black);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-item a:hover {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
 .skill-item a {
     display: flex;
     font-size: 1.5rem;
@@ -227,7 +255,6 @@ P {
     text-decoration: underline;
 }
 
-.project-item a:hover,
 .skill-item a:hover {
     color: var(--bg-hover);
     transition: 0.3s;
@@ -288,6 +315,7 @@ P {
     background-color: var(--bg-navbar);
     border-radius: 15px;
     box-shadow: var(--box-shadow);
+    text-align: left;
 }
 
 .contact-form form {
@@ -306,6 +334,7 @@ P {
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
+.contact-form input[type="phone"],
 .contact-form textarea {
     width: 100%;
     padding: 12px 15px;
