@@ -10,8 +10,8 @@ It provided strong hands-on practice in front-end development, with a focus on r
     -   [Screenshot](#screenshot)
     -   [Links](#links)
 -   [My process](#my-process)
-    -   [Technologies & Tools Used](#technologies-&-tools-used)
-    -   [Ongoing Development & Learning](#ongoing-development-&-learning)
+    -   [Technologies](#technologies)
+    -   [Ongoing Development](#ongoing-development)
     -   [Useful resources](#useful-resources)
 -   [Author](#author)
 
@@ -37,14 +37,14 @@ It provided strong hands-on practice in front-end development, with a focus on r
 
 ## My process
 
-### Technologies & Tools Used
+### Technologies
 
 -   Semantic HTML5 for clear structure and accessibility.
 -   CSS Variables to maintain consistent theming and easier customization.
 -   Flexbox Layout for flexible, responsive component alignment.
 -   Media Queries to ensure full responsiveness across devices and screen sizes.
 
-### Ongoing Development & Learning
+### Ongoing Development
 
 I continue to strengthen my responsive web design skills, with a focus on mastering CSS Flexbox and Bootstrap to build more complex, scalable, and maintainable layouts.
 Additionally, I plan to deepen my knowledge of performance optimization techniques, including CSS minification, lazy loading, and efficient asset management, in future projects.
