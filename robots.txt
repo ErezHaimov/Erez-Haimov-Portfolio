@@ -1,0 +1,7 @@
+User-agent: *
+
+Allow: /
+
+Host: erez-haimov-portfolio.netlify.app
+
+Sitemap: https://erez-haimov-portfolio.netlify.app/sitemap.xml

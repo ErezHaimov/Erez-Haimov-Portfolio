@@ -5,11 +5,12 @@
     --bg-navbar: #e9d5fc; /* navbar */
     --bg-navbar-transparent: #e9d5fc91; /* navbar */
     --bg-hover: #8f6dd4; /* hover / active item */
-    --text-primary: #1f2937; /* main text (almost black) */
-    --text-secondary: #6b7280; /* muted text */
+    --text-primary: #292929; /* main text (almost black) */
+    --text-primary-light: #3f3f3f; /* main muted text */
+    --text-secondary: #777777; /* muted text */
+    --text-secondary-light: #a0a0a0; /* even more muted text */
     --accent-main: #7c3aed; /* violet */
     --accent-strong: #5b21b6; /* darker violet */
-    --border-light: #e5e7eb;
     --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
@@ -56,36 +57,34 @@ section {
     text-align: center;
     border-radius: 10px;
     width: 90%;
-    box-shadow: var(--box-shadow);
-    margin: 20px 0;
 }
 
 h1 {
-    font-size: 5rem;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-h2 {
     font-size: 4rem;
     margin-bottom: 10px;
     margin-top: 10px;
 }
 
-h3 {
+h2 {
     font-size: 3rem;
     margin-bottom: 10px;
     margin-top: 10px;
 }
 
-h4 {
+h3 {
     font-size: 2.5rem;
     margin-bottom: 10px;
     margin-top: 10px;
 }
 
-h5 {
+h4 {
     font-size: 2rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+h5 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
     margin-top: 10px;
 }
@@ -106,7 +105,6 @@ P {
     position: sticky;
     top: 0;
     z-index: 100;
-
     background-color: var(--bg-navbar);
     display: flex;
     flex-direction: row-reverse;
@@ -115,10 +113,28 @@ P {
     box-shadow: var(--box-shadow);
 }
 
-.header img {
-    height: 6rem;
-    margin: 0;
-    display: block;
+/* Container for the name logo */
+.navbar-logo-link {
+    display: flex;
+    padding: 1rem 2rem;
+    text-decoration: none;
+}
+
+/* Common styles for the logo text */
+.logo-first, .logo-last {
+    font-size: 2rem; /* Large and clear */
+    font-weight: 900;   /* Extra bold for a logo look */
+    letter-spacing: -0.5px;
+}
+
+/* Erez in White */
+.logo-first {
+    color: var(--text-secondary-light);
+}
+
+/* Haimov in Main Text Color */
+.logo-last {
+    color: var(--accent-main);
 }
 
 .header .navbar {
@@ -184,6 +200,7 @@ P {
     box-shadow: var(--box-shadow);
 }
 
+/* About styling */
 #about {
     text-align: left; /* Aligns the text characters */
     display: flex;
@@ -210,12 +227,8 @@ P {
     align-self: flex-start;
     margin-top: 10px;
 }
-.card-img-top {
-    height: 200px;
-    object-fit: cover; /* This prevents the image from stretching */
-    border-bottom: 1px solid white; /* Adds a tiny separator line */
-}
 
+/* Projects styling */
 .project-item .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: white;
@@ -248,6 +261,13 @@ P {
     text-decoration: underline;
 }
 
+.card-img-top {
+    height: 200px;
+    object-fit: cover; /* This prevents the image from stretching */
+    border-bottom: 1px solid white; /* Adds a tiny separator line */
+}
+
+/* Skills styling */
 .skill-item a {
     display: flex;
     font-size: 1.5rem;
@@ -262,30 +282,25 @@ P {
 
 .skills-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
     width: 100%;
     gap: 20px;
     justify-content: center;
     align-items: stretch;
-    margin: 0 auto;
 }
 
 .skill-item {
-    width: 100%;
-    min-width: 250px;
-    max-width: 500px;
-    min-height: 450px;
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto auto auto;
     justify-items: center;
     align-items: center;
-
+    width: 100%;
+    min-height: 300px;
     border-radius: 10px;
     box-shadow: var(--box-shadow);
     box-sizing: border-box;
-    padding: 2rem; /* Added padding to keep icons away from edges */
+    padding: 1rem; /* Added padding to keep icons away from edges */
 }
 
 .skill-item h3 {
@@ -295,7 +310,6 @@ P {
 .skill-item img {
     max-width: 75%;
     max-height: 75%;
-    margin-top: 0;
 }
 
 .skill-item img:hover {
@@ -308,6 +322,7 @@ P {
     justify-self: center;
 }
 
+/* Contact form styling*/
 .contact-form {
     max-width: 600px;
     margin: 15px auto;
@@ -335,6 +350,7 @@ P {
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form input[type="phone"],
+.contact-form select[name="reason"],
 .contact-form textarea {
     width: 100%;
     padding: 12px 15px;
@@ -346,8 +362,22 @@ P {
     font-family: inherit;
     transition: all 0.3s ease;
 }
+
 .contact-form ::placeholder {
     color: var(--text-secondary);
+}
+
+.reason-select:invalid,
+.reason-select option.placeholder-option {
+    color: var(--text-secondary) !important;
+}
+
+.reason-select option {
+    color: var(--text-primary);
+}
+
+.reason-select:valid {
+    color: var(--text-primary);
 }
 
 /* Focus effect: The border glows violet when you click inside */
@@ -369,6 +399,7 @@ P {
     width: 100%;
 }
 
+/* footer styling*/
 footer {
     position: sticky;
     bottom: 0;
@@ -380,15 +411,6 @@ footer {
     background-color: var(--bg-navbar);
     width: 100%;
     box-shadow: var(--box-shadow);
-}
-
-footer #contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-footer #contact p {
-    font-size: 1.8rem;
-    margin: 2px 0;
 }
 
 footer #contact a {
@@ -406,6 +428,7 @@ footer #contact a:hover {
     align-items: center;
     justify-content: center;
 }
+
 .footer-socials a {
     transition: all 0.3s ease;
     display: inline-block;
@@ -418,18 +441,19 @@ footer #contact a:hover {
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
     transition: all 0.3s ease;
 }
+
 .footer-socials a:hover img,
 .footer-socials a:active img {
     transform: scale(1.2) rotate(5deg);
     filter: drop-shadow(0 0 20px var(--box-shadow));
 }
 
+/* "Back to Top" button styling */
 #toTopBtn {
     position: absolute;
     right: 20px;
-    bottom: 35px;
+    top: calc(50% - 15px);
     transform: translateY(-50%);
-
     width: 50px;
     height: 50px;
     background: var(--accent-main);
@@ -446,6 +470,7 @@ footer #contact a:hover {
     pointer-events: auto;
 }
 
+/* Footer bottom text styling */
 .footer-bottom {
     text-align: center;
     font-size: 1.4rem;
