@@ -137,6 +137,7 @@ P {
     color: var(--accent-main);
 }
 
+/* navbar + hamburger menu styling */
 .header .navbar {
     margin-right: 2rem;
 }
