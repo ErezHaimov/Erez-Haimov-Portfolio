@@ -29,7 +29,7 @@ It provided strong hands-on practice in front-end development, with a focus on r
 
 ### Screenshot
 
-(pictures/site-screenshot.png)
+[pictures/site-screenshot.png]
 
 ### Links
 
