@@ -10,8 +10,8 @@ It provided strong hands-on practice in front-end development, with a focus on r
     -   [Screenshot](#screenshot)
     -   [Links](#links)
 -   [My process](#my-process)
-    -   [Technologies & Tools Used](#Technologies-&-Tools-Used)
-    -   [Ongoing Development & Learning](#Ongoing-Development-&-Learning)
+    -   [Technologies & Tools Used](#technologies-&-tools-used)
+    -   [Ongoing Development & Learning](#ongoing-development-&-learning)
     -   [Useful resources](#useful-resources)
 -   [Author](#author)
 
