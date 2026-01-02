@@ -54,7 +54,8 @@ Additionally, I plan to deepen my knowledge of performance optimization techniqu
 -   [Netlify - Hosting & Deployment](https://netlify.com/).
 -   [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/).
 -   [pngegg - PNG Icons](https://www.pngegg.com/).
--   [sgrepo - SVG Vector and Icons](https://www.svgrepo.com/).
+-   [svgrepo - SVG Vector and Icons](https://www.svgrepo.com/).
+-   [Google Fonts](https://fonts.google.com/).
 
 ## Author
 
