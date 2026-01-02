@@ -51,12 +51,12 @@ Additionally, I plan to deepen my knowledge of performance optimization techniqu
 
 ### Useful resources
 
--   [Netlify - Hosting & Deployment](https://netlify.com/).
--   [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/).
--   [pngegg - PNG Icons](https://www.pngegg.com/).
--   [svgrepo - SVG Vector and Icons](https://www.svgrepo.com/).
--   [Google Fonts](https://fonts.google.com/).
+-   [Netlify - Hosting & Deployment](https://netlify.com/)
+-   [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+-   [pngegg - PNG Icons](https://www.pngegg.com/)
+-   [svgrepo - SVG Vector and Icons](https://www.svgrepo.com/)
+-   [Google Fonts](https://fonts.google.com/)
 
 ## Author
 
--   LinkedIn - [erez-haimov](https://www.linkedin.com/in/erez-haimov/).
+-   LinkedIn - [erez-haimov](https://www.linkedin.com/in/erez-haimov/)
