@@ -53,11 +53,10 @@ main {
 }
 
 section {
-    padding: 2rem;
+    padding: 1rem;
     text-align: center;
     border-radius: 10px;
     width: 90%;
-    box-shadow: var(--box-shadow);
 }
 
 h1 {
