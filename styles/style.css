@@ -57,6 +57,7 @@ section {
     text-align: center;
     border-radius: 10px;
     width: 90%;
+    box-shadow: var(--box-shadow);
 }
 
 h1 {
@@ -233,40 +234,46 @@ P {
 /* Projects styling */
 .project-item .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: white;
     border-radius: 10px;
     overflow: hidden;
 }
 
 .project-item .card:hover {
     transform: translateY(-5px);
-    background: var(--bg-hover);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Style the images inside the thumbnails */
-.project-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover; /* Keeps images from stretching */
-}
-
-.project-item a {
-    font-size: 1.1rem;
-    color: var(--black);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.project-item a:hover {
-    color: var(--main-color);
-    text-decoration: underline;
 }
 
 .card-img-top {
-    height: 200px;
+    height: 100%;
+    width: 100%;
     object-fit: cover; /* This prevents the image from stretching */
-    border-bottom: 1px solid white; /* Adds a tiny separator line */
+}
+
+.card-title {
+    margin-bottom: 2px !important; /* Forces the title closer to the bottom row */
+    font-size: 1rem; /* Slightly smaller title looks cleaner */
+}
+
+/* Reduces the gap between the projext title and the project description */
+.d-flex.justify-content-between {
+    margin-top: 4px !important;
+}
+
+/* Style for the "Mechanic" text */
+.text-secondary {
+    font-weight: 500;
+}
+
+/* Style for the icons */
+.project-links i {
+    line-height: 1;
+    font-size: 1.2rem;
+    display: inline-block;
+    vertical-align: middle;
+    transition: color 0.2s;
+}
+
+.project-links a:hover i {
+    color: #7c3aed; /* Your purple theme color */
 }
 
 /* Skills styling */
