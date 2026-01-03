@@ -197,14 +197,14 @@ P {
 
 .btn:hover {
     background-color: var(--accent-main);
-    color: white; /* Flips colors on hover */
+    color: white;
     transform: translateY(-3px);
     box-shadow: var(--box-shadow);
 }
 
 /* About styling */
 #about {
-    text-align: left; /* Aligns the text characters */
+    text-align: left;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -263,7 +263,7 @@ P {
     font-weight: 750;
 }
 
-/* Style for the icons */
+/* Style for the project icons */
 .project-links i {
     line-height: 1;
     font-size: 1.5rem;
@@ -273,7 +273,7 @@ P {
 }
 
 .project-links a:hover i {
-    color: #7c3aed; /* Your purple theme color */
+    color: var(--accent-main);
 }
 
 /* Skills styling */
@@ -380,7 +380,7 @@ P {
     padding: 12px 15px;
     border: 2px solid transparent;
     border-radius: 8px;
-    background-color: var(--bg-main); /* Slightly darker than form background */
+    background-color: var(--bg-main);
     color: var(--text-primary);
     font-size: 1.25rem;
     transition: all 0.3s ease;
@@ -409,7 +409,7 @@ P {
     outline: none;
     border-color: var(--accent-main);
     background-color: white;
-    box-shadow: 0 0 8px rgba(138, 43, 226, 0.2);
+    box-shadow: 0 0 8px var(--accent-strong);
 }
 
 .contact-form textarea {
