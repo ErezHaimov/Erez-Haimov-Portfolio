@@ -405,6 +405,7 @@ P {
 
 /* Focus effect: The border glows violet when you click inside */
 .contact-form input:focus,
+.contact-form select:focus,
 .contact-form textarea:focus {
     outline: none;
     border-color: var(--accent-main);
