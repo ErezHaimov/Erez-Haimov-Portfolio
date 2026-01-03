@@ -29,7 +29,7 @@ It provided strong hands-on practice in front-end development, with a focus on r
 
 ### Screenshot
 
-![pictures/site-screenshot.png](pictures/site-screenshot.png)
+![pictures/Screenshots/site-screenshot.png](pictures/Screenshots/site-screenshot.png)
 
 ### Links
 
@@ -60,4 +60,5 @@ Additionally, I plan to deepen my knowledge of performance optimization techniqu
 
 ## Author
 
+-   GitHub - [ErezHaimov](https://github.com/ErezHaimov)
 -   LinkedIn - [erez-haimov](https://www.linkedin.com/in/erez-haimov/)
