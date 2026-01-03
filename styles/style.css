@@ -250,23 +250,24 @@ P {
 
 .card-title {
     margin-bottom: 2px !important; /* Forces the title closer to the bottom row */
-    font-size: 1rem; /* Slightly smaller title looks cleaner */
+    font-size: 1.5rem;
+    font-weight: 750;
 }
 
-/* Reduces the gap between the projext title and the project description */
+/* Reduces the gap between the project title and the project description */
 .d-flex.justify-content-between {
     margin-top: 4px !important;
 }
 
-/* Style for the "Mechanic" text */
+/* Style for the project description */
 .text-secondary {
-    font-weight: 500;
+    font-weight: 750;
 }
 
 /* Style for the icons */
 .project-links i {
     line-height: 1;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     display: inline-block;
     vertical-align: middle;
     transition: color 0.2s;
