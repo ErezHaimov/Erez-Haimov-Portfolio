@@ -33,7 +33,7 @@ It provided strong hands-on practice in front-end development, with a focus on r
 
 ### Links
 
--   Live Site URL: [https://erez-haimov-portfolio.netlify.app/](https://erez-haimov-portfolio.netlify.app/)
+-   Live Site URL: [https://erezhaimov.github.io/Erez-Haimov-Portfolio/](https://erezhaimov.github.io/Erez-Haimov-Portfolio/)
 
 ## My process
 
@@ -51,7 +51,7 @@ Additionally, I plan to deepen my knowledge of performance optimization techniqu
 
 ### Useful resources
 
--   [Netlify - Hosting & Deployment](https://netlify.com/)
+-   [Web3Forms](https://app.web3forms.com/)
 -   [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 -   [Bootstrap Icons](https://icons.getbootstrap.com/)
 -   [pngegg - PNG Icons](https://www.pngegg.com/)

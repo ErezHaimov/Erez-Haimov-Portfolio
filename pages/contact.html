@@ -63,7 +63,15 @@
                 <!-- Form container -->
                 <div class="contact-form">
                     <!-- Form -->
-                    <form name="Contact_Form" method="POST" data-netlify="true">
+                    <form
+                        action="https://api.web3forms.com/submit"
+                        method="POST"
+                    >
+                        <input
+                            type="hidden"
+                            name="access_key"
+                            value="326c214c-5ed9-4a5a-b15b-81fb34a98605"
+                        />
                         <!-- Input text box -->
                         <div>
                             <label for="name">Name:</label>
