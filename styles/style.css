@@ -332,14 +332,29 @@ P {
 }
 
 /* Contact form styling*/
+.contact-section {
+    display: flex;
+    flex-direction: row; /* Side-by-side */
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    width: 75%;
+    text-align: left; /* Align text within its container */
+}
+
 .contact-form {
-    max-width: 600px;
-    margin: 15px auto;
+    flex: 1;
+    order: 2;
     padding: 15px;
     background-color: var(--bg-navbar);
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: var(--box-shadow);
     text-align: left;
+}
+
+.contact-text {
+    flex: 1;
+    order: 1;
 }
 
 .contact-form form {

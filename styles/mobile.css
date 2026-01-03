@@ -48,6 +48,24 @@
         flex-direction: column;
     }
 
+    /* Contact styling */
+    .contact-section {
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+    }
+
+    .contact-text {
+        order: 1;
+        margin-left: 0px;
+    }
+
+    .contact-form {
+        order: 2;
+        width: 100%;
+        margin-right: 0px;
+    }
+
     /* "Back to Top" button styling */
     #toTopBtn {
         width: 40px;
