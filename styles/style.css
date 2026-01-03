@@ -272,6 +272,10 @@ P {
     transition: color 0.2s;
 }
 
+.project-links a {
+    text-decoration: none !important;
+}
+
 .project-links a:hover i {
     color: var(--accent-main);
 }
